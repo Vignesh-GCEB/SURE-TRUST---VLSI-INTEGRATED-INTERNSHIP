@@ -101,29 +101,11 @@ The reference model includes modeled alarm states, arming modes, PIN authenticat
 
 The repository does not currently include a portable, self-contained simulator run script or a complete DUT source package. Simulation commands therefore depend on the local DUT RTL, UVM installation, simulator setup, and file-list/include configuration.
 
-## Running the Testbench
+## Run on EDA Playground
 
-1. Clone the repository:
+The Smart Home Alarm Controller verification testbench is available on EDA Playground.
 
-   ```bash
-   git clone https://github.com/Vignesh-GCEB/SURE-TRUST---VLSI-INTEGRATED-INTERNSHIP.git
-   cd SURE-TRUST---VLSI-INTEGRATED-INTERNSHIP
-   ```
-
-2. Open the project in a SystemVerilog simulator with UVM support.
-3. Add the project source files, DUT RTL, and required include directories to the simulator file list.
-4. Ensure that the UVM library and simulator environment are configured.
-5. Compile and run the selected test (for example, `alarm_smoke_test`, `motion_alarm_test`, or `perimeter_alarm_test`) using the simulator's project-specific command line.
-
-A generic VCS invocation, once a correct file list and include paths have been prepared, has this form:
-
-```bash
-vcs -sverilog -ntb_opts uvm -f <filelist.f> -top tb_top \
-    +UVM_TESTNAME=<test_name> -o simv
-./simv
-```
-
-This is a template, not a verified command for the current repository: update the file list, include paths, top module, and test name to match the actual local setup.
+**[Open the project on EDA Playground](https://edaplayground.com/x/Y5fD)**
 
 ## Notes
 
